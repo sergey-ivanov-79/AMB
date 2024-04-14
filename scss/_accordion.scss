@@ -1,0 +1,87 @@
+.accordion {
+  &-pd {
+    .accordion-item {
+      background: transparent;
+      border: none;
+      .accordion-button {
+        padding: 0;
+        background: transparent;
+        outline: none;
+        border: none;
+        box-shadow: none !important;
+        &:after {
+          @media (min-width: 768px) {
+            display: none;
+          }
+        }
+      }
+      .accordion-body {
+        border: none;
+        padding: 0;
+        background: transparent;
+      }
+    }
+  }
+}
+@media (min-width: 768px) { 
+  .modified-accordion .collapse {
+    display: block;
+    height: auto !important;
+    visibility: visible;
+  }
+  .modified-accordion .collapsing {
+    position: relative;
+    height: unset !important;
+    overflow: hidden;
+  }
+}
+.questions_answers_block {
+  margin-top: 30px;
+  @media (max-width: 991.98px) {
+    margin-top: 20px;
+  }
+}
+.accordion {
+  &-main {
+    .accordion-item {
+      border-radius: 0px !important;
+      border: none !important;
+      border-bottom: 1px solid #BEBEBE !important;
+      padding: 0;
+      .accordion-button {
+        padding: 28px 0px;
+        background: transparent;
+        box-shadow: none !important;
+        border-radius: 0px !important;
+        cursor: pointer;
+        @media (max-width: 767.98px) {
+          padding-top: 14px;
+          padding-bottom: 14px;
+        }
+        &[aria-expanded="true"] {
+          color: #60AB5A;
+        }
+        &:after {
+          background-image: url('../img/svg/plus_new.svg') !important;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        &:not(.collapsed)::after {
+          background-image: url('../img/svg/minus_new.svg') !important;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+      .accordion-body {
+        max-width: 600px;
+        padding: 0px 0px 28px;
+        .text-md {
+          line-height: 155.556%;
+        }
+      }
+    }
+  }
+}
+.faq_block {
+  max-width: 680px;
+}
