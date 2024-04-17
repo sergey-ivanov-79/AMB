@@ -10,7 +10,7 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="./dependencies/wow/css/animate.css" type="text/css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/styles.css">
   </head>
 
@@ -37,9 +37,9 @@
                 <div class="inner_info_product">
                   <div class="wrapper-group-sliders">
                     <div class="swiper gallery-top">
-                      <div class="onsale">on sale</div>
                       <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-bs-toggle="modal" data-bs-target="#exModal">
+                          <div class="onsale">on sale</div>
                           <div class="wrapper_product">
                             <img class="img-fluid" src="./img/png/slider/product_1.png" alt="">
                           </div>
@@ -96,7 +96,6 @@
                     <div class="d-flex align-items-center mb-md-2">
                       <div class="price_new fw-700 color-red me-3">309 <sup class="fw-400">90</sup><span>€</span></div>
                       <div class="price_old fw-500 color-gray">468<span class="fw-700">€</span></div>
-                      
                       <div class="d-block d-md-none ms-2">
                         <div data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="Preisangaben inkl. USt. Abhängig von der Lieferadresse kann die USt. an der Kasse variieren. <a href='#' class='fw-600'>Weitere Informationen</a>">
                           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -1338,18 +1337,94 @@
           </div>
         </div>
       </div>
-
-      
     </div>
-    <!-- <a href="#" class="back-to-top" style="display: none !important;">
-      <img class="navigate" src="./img/svg/arrow_to.svg" alt="arrow-to">
-    </a> -->
+
+    <!-- Modal -->
+    <div class="modal modal-xl modal-dop fade" id="exModal" tabindex="-1" aria-labelledby="exModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal_header">
+            <div class="btn_close" data-bs-dismiss="modal" aria-label="Close">
+              <img src="./img/svg/circle-x.svg" alt="">
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="item-modal-content">
+              <div class="slider-modal">
+                <div class="swiper gallery-top-2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="onsale">on sale</div>
+                      <div class="wrapper_product">
+                        <img class="img-fluid" src="./img/png/slider/product_1.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="wrapper_product">
+                        <img class="img-fluid" src="./img/png/slider/product_2.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="wrapper_product">
+                        <img class="img-fluid" src="./img/png/slider/product_1.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div class="modal-info">
+                <h2 class="h2 fw-700 mb-3">
+                  Emergency Watch with GPS & Fall Detection for Seniors, including SIM Card
+                </h2>
+                <div class="swiper gallery-thumbs-2 mb-3">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="wrapper_product">
+                        <img class="img-fluid" src="./img/png/slider/product_1.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="wrapper_product">
+                        <img class="img-fluid" src="./img/png/slider/product_2.png" alt="">
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="wrapper_product">
+                        <img class="img-fluid" src="./img/png/slider/product_1.png" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row-variant mb-4">
+                  <div class="type_el mb-2">
+                    <span class="text-lg fw-700">Color:</span>
+                    <span class="text-md type_color" id="colortitle">Black</span>
+                  </div>
+                  <div class="row-variant-options">
+                    <div class="row-variant-option">
+                      <div class="row-variant-option-box color_clock color_clock_black active" data-title="Black"><div></div></div>
+                    </div>
+                    <div class="row-variant-option">
+                      <div class="row-variant-option-box color_clock color_clock_gray" data-title="Gray"><div></div></div>
+                    </div>
+                    <div class="row-variant-option">
+                      <div class="row-variant-option-box color_clock color_clock_white" data-title="White"><div></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
     <!-- <script src="./dependencies/wow/js/wow.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/slider.js"></script>
 
@@ -1392,6 +1467,16 @@
             return text === "Show Less" ? "Show More" : "Show Less";
           })
         });
+      });
+      $(window).scroll(function() {
+        var blockOffset = $('#faq').offset().top;
+        var scrollPos = $(window).scrollTop();
+
+        if (scrollPos >= blockOffset) {
+          $('.bottom_block').addClass('fixed_block');
+        } else {
+          $('.bottom_block').removeClass('fixed_block');
+        }
       });
     </script>
     

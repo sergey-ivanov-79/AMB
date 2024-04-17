@@ -37,6 +37,25 @@ tbody::-webkit-scrollbar {
     max-width: 1100px;
   }
 }
+.container_min {
+  max-width: 760px;
+}
+h1, .h1 {
+  font-size: 32px;
+  line-height: 180%;
+  margin-top: 0;
+  margin-bottom: 0;
+  @media (max-width: 1200px) {
+    font-size: 28px;
+  }
+  @media (max-width: 991.98px) {
+    font-size: 26px;
+  }
+  @media (max-width: 575.98px) {
+    font-size: 24px;
+    line-height: 150%;
+  }
+}
 h2, .h2 {
   font-size: 26px;
   line-height: 123.077%;
@@ -136,6 +155,9 @@ ul {
 }
 .lh-15 {
   line-height: 1.5 !important;
+}
+.lh-18 {
+  line-height: 1.8 !important;
 }
 .mb-06 {
   margin-bottom: 6px;

@@ -76,15 +76,4 @@
     $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
   });
 
-  $(window).scroll(function() {
-    var blockOffset = $('#faq').offset().top;
-    var scrollPos = $(window).scrollTop();
-
-    if (scrollPos >= blockOffset) {
-        $('.bottom_block').addClass('fixed_block');
-    } else {
-        $('.bottom_block').removeClass('fixed_block');
-    }
-  });
-
 })(jQuery);
